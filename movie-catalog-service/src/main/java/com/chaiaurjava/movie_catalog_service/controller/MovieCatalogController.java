@@ -35,12 +35,12 @@ public class MovieCatalogController {
 
 
         // get All rated movie Ids
-        UserRating ratings = restTemplate.getForObject("http://localhost:8082/ratingsdata/users/"+userId, UserRating.class);
+        UserRating ratings = restTemplate.getForObject("http://MOVIE-RATING-DATA-SERVICE/ratingsdata/users/"+userId, UserRating.class);
 
 
         return ratings.getRatings(). stream().map(rating -> {
                 // For each moview Id, call movie info service and get details
-               Movie movie = restTemplate.getForObject("http://localhost:8081/movies/"+ rating.getMovieId(), Movie.class);
+               Movie movie = restTemplate.getForObject("http://MOVIE-INFO-SERVICE/movies/"+ rating.getMovieId(), Movie.class);
 
             /*Movie movie = webClientBuilder.build()
                     .get()
