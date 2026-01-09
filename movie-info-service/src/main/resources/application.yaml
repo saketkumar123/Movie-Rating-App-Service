@@ -3,3 +3,5 @@ server:
 spring:
   application:
     name: movie-info-service
+api:
+  key: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjQ2YjI2YmVlYzE0NjBjNDMwZjJhMzRlMGM4ODAyZCIsIm5iZiI6MTY3MzUzODE2NS45MTM5OTk4LCJzdWIiOiI2M2MwMmE3NTA1YTUzMzAwYWVjZjIyN2YiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.i4ZZbMHp-0HDA4fkBq6mGasrHeVOBu_FTevD3e7A2ig
