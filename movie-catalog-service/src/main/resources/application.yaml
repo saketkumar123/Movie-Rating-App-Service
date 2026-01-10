@@ -3,3 +3,34 @@ server:
 spring:
   application:
     name: movie-catalog-service
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:                   # global default config
+        registerHealthIndicator: true
+        slidingWindowSize: 2      # track only 2 calls for error calculation
+        minimumNumberOfCalls: 1   # compute error rate after 1st call
+        failureRateThreshold: 1   # 1% → treat a single failure as threshold exceed
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+
+    instances:
+      backendService:            # circuit breaker instance name
+        baseConfig: default
+        slidingWindowType: COUNT_BASED
+
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 4s
+    instances:
+      backendService:
+        baseConfig: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
