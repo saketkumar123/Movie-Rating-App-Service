@@ -5,6 +5,17 @@ spring:
     name: movie-catalog-service
 
 resilience4j:
+  bulkhead:
+    configs:
+      default:
+        maxConcurrentCalls: 2
+        maxWaitDuration: 0
+    instances:
+      backendService: # MUST match @Bulkhead name
+        maxConcurrentCalls: 2
+#        baseConfig: default
+    metrics:
+      enabled: true
   circuitbreaker:
     configs:
       default:                   # global default config
@@ -20,6 +31,9 @@ resilience4j:
         baseConfig: default
         slidingWindowType: COUNT_BASED
 
+    metrics:
+      enabled: true
+
   timelimiter:
     configs:
       default:
@@ -32,5 +46,11 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health,info,metrics,prometheus
+    endpoint:
+      health:
+        show-details: always
+
+
+
 
