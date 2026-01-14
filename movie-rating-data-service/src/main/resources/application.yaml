@@ -3,3 +3,11 @@ server:
 spring:
   application:
     name: movie-rating-data-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

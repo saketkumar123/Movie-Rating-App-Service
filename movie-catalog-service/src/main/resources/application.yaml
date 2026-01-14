@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: movie-catalog-service
+  config:
+    import: optional:configserver:http://localhost:8888
 
 resilience4j:
   bulkhead:
