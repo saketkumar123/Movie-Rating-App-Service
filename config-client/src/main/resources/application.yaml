@@ -5,9 +5,13 @@ spring:
     name: config-client
   config:
     import: optional:configserver:http://localhost:8888
-  profiles:
-    active: test
-
+#  profiles:
+#    active: test
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 my:
   greeting: Hello World
 
