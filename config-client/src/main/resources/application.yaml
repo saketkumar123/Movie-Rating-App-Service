@@ -2,11 +2,11 @@ server:
   port: 8000
 spring:
   application:
-    name: config-server
+    name: config-client
   config:
     import: optional:configserver:http://localhost:8888
-#  profiles:
-#    active: prod
+  profiles:
+    active: test
 
 my:
   greeting: Hello World
