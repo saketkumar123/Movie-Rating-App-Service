@@ -1,3 +1,13 @@
+server:
+  port: 8888
 spring:
   application:
     name: spring-cloud-config-server
+  cloud:
+    config:
+      import-check:
+        enabled: false
+      server:
+        git:
+          uri: https://github.com/saketkumar123/Movie-Rating-App-Config-Repo
+          default-label: master

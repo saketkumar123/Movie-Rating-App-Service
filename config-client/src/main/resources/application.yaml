@@ -1,0 +1,23 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: config-server
+  config:
+    import: optional:configserver:http://localhost:8888
+#  profiles:
+#    active: prod
+
+my:
+  greeting: Hello World
+
+db:
+  mysql:
+    connection: http://localhost:8080/mysql
+    username: saketulsi_mysql
+    password: mdasffdgfggh
+
+  oracle:
+    connection: http://localhost:8080/oracle
+    username: saketulsi_oracle
+    password: eryttriuro
