@@ -1,0 +1,14 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: config-server
+
+my:
+  greeting: Hello World Test
+
+db:
+  mysql:
+    connection: http://localhost:8080/mysql
+    username: saketulsi_mysql
+    password: mdasffdgfggh

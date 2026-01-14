@@ -1,0 +1,14 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: config-server
+
+my:
+  greeting: Hello World Production
+
+db:
+  oracle:
+    connection: http://localhost:8080/oracle
+    username: saketulsi_oracle
+    password: eryttriuro
