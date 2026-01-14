@@ -1,4 +1,4 @@
-package com.chaiaurjava.config_server;
+package com.chaiaurjava.config_client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

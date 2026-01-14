@@ -1,15 +1,14 @@
-package com.chaiaurjava.config_server;
+package com.chaiaurjava.config_client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @SpringBootApplication
 //@ConfigurationPropertiesScan
-public class ConfigServerApplication {
+public class ConfigClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigServerApplication.class, args);
+		SpringApplication.run(ConfigClientApplication.class, args);
 	}
 
 }

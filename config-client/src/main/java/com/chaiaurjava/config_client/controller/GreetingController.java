@@ -1,7 +1,7 @@
-package com.chaiaurjava.config_server.controller;
+package com.chaiaurjava.config_client.controller;
 
-import com.chaiaurjava.config_server.datasource.MySQLDatasource;
-import com.chaiaurjava.config_server.datasource.OracleDatasource;
+import com.chaiaurjava.config_client.datasource.MySQLDatasource;
+import com.chaiaurjava.config_client.datasource.OracleDatasource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;

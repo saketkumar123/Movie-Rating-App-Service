@@ -1,8 +1,7 @@
-package com.chaiaurjava.config_server.datasource;
+package com.chaiaurjava.config_client.datasource;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 
 @Configuration
 @ConfigurationProperties(prefix = "db.oracle")
